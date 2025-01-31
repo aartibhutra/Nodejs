@@ -51,6 +51,13 @@ const fs = require("fs");
 // fs.mkdirSync("my-docss/a/b",{recursive : true});
 
 // fs.rmdirSync('my-doc');
-fs.rmSync('my-docss', { recursive: true, force: true });
+// fs.rmSync('my-docss', { recursive: true, force: true });
+
+
+// find the thread pool :
+const os = require("os");
+console.log(
+    os.cpus().length // ives the maximum thread size 
+);
 
 
