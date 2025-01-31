@@ -2,4 +2,5 @@
 function add(a,b){
     return a+b;
 }
-// module is an object use the method export to export the function
+// module is an object use the method exports to export the function
+module.exports = "Aarti";
