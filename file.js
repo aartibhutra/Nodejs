@@ -6,4 +6,8 @@
 
 const fs = require("fs");
 // create a file :
-fs.writeFileSync('./test.txt','Hey There');
+// sync.. call
+// fs.writeFileSync('./test.txt','Hey There');
+
+// Async:
+fs.writeFile('./test.txt','Hey There Async',(err)=>{});
