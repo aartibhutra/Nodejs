@@ -3,4 +3,7 @@ function add(a,b){
     return a+b;
 }
 // module is an object use the method exports to export the function
-module.exports = "Aarti";
+// module.exports = "Aarti";
+
+// it is equal to the add function
+module.exports = add;

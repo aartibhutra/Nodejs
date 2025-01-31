@@ -4,3 +4,6 @@
 
 const math = require('./Math')
 console.log("Math Value is",math);
+
+// pass two value to call the add function
+console.log("Math Value is",math(4,5)); 
