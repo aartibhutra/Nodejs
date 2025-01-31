@@ -6,10 +6,10 @@
 
 const fs = require("fs");
 // create a file :
-// sync.. call
+// sync.. call : blocking request
 // fs.writeFileSync('./test.txt','Hey There');
 
-// Async:
+// Async: non - blocking request
 // fs.writeFile('./test.txt','Hey There Async',(err)=>{});
 
 
