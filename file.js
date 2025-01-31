@@ -43,6 +43,13 @@ const fs = require("fs");
 // fs.unlinkSync("./copy.txt");
 
 // state of the file :
-console.log( fs.statSync("./test.txt"));
+// console.log( fs.statSync("./test.txt"));
+console.log( fs.statSync("./test.txt").isFile());
+
+//make directory :
+// fs.mkdirSync("my-doc");
+fs.mkdirSync("my-docss/a/b",{recursive : true});
+
+fs.unlinkSync("./my-doc");
 
 
