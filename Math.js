@@ -20,6 +20,7 @@
 // module.exports = sub;// this is wrong, because it override the value (add function)
 
 // so avoid override function we use the javascript object to return multiple things so we call it as single export(default export)
+// these use only at a one time because it override the values 
 // module.exports = {
 //     add,// you also rename like addfn : add
 //     sub,// here we rename sub function as sunfn : sun
