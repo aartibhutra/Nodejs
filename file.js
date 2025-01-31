@@ -4,7 +4,6 @@
                 // fs is a build-in in the node 
                 // you use fs to interact with file system
 
-const fs = require("fs");
 // create a file :
 // sync.. call
 // fs.writeFileSync('./test.txt','Hey There');
@@ -21,11 +20,18 @@ const fs = require("fs");
 
 //Async: but here we use the callback function bcz Async doesn't give the value to the variable 
 // basically Async return nothing 
-fs.readFile('./contact.txt',"utf-8",(err,result)=>{
-    if(err){
-        console.log("Error");
+// fs.readFile('./contact.txt',"utf-8",(err,result)=>{
+//     if(err){
+//         console.log("Error");
         
-    }else{
-        console.log(result);
-    }
-});
+//     }else{
+//         console.log(result);
+//     }
+// });
+
+//append file: not override the file 
+
+// fs.appendFileSync("./test.txt",new Date().getDate().toLocaleString());
+// fs.appendFileSync("./test.txt", `hello\n`);
+(require("fs")).appendFileSync("./test.txt", `${Date.now()} hello\n`);
+
