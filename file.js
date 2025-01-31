@@ -38,3 +38,6 @@ fs.appendFileSync("./test.txt", `${Date.now()} hello\n`);
 
 // copy file :
 fs.cpSync("./test.txt","./copy.txt");
+
+// delete file :
+fs.unlinkSync("./copy.txt");
