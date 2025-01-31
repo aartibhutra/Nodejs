@@ -34,10 +34,15 @@ const fs = require("fs");
 
 // fs.appendFileSync("./test.txt",new Date().getDate().toLocaleString());
 // fs.appendFileSync("./test.txt", `hello\n`);
-fs.appendFileSync("./test.txt", `${Date.now()} hello\n`);
+// fs.appendFileSync("./test.txt", `${Date.now()} hello\n`);
 
 // copy file :
-fs.cpSync("./test.txt","./copy.txt");
+// fs.cpSync("./test.txt","./copy.txt");
 
 // delete file :
-fs.unlinkSync("./copy.txt");
+// fs.unlinkSync("./copy.txt");
+
+// state of the file :
+console.log( fs.statSync("./test.txt"));
+
+
