@@ -29,6 +29,7 @@
 // another way to export like use the export object 
 // multiple exports 
 
+// here use the anonymous function and add and sub is a property that we give and we give anything instead of add and sub also 
 exports.add = (a,b) => a+b;
 exports.sub = (a,b) => a-b;
 
