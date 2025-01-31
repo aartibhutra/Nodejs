@@ -4,6 +4,7 @@
                 // fs is a build-in in the node 
                 // you use fs to interact with file system
 
+const fs = require("fs");
 // create a file :
 // sync.. call
 // fs.writeFileSync('./test.txt','Hey There');
@@ -33,5 +34,7 @@
 
 // fs.appendFileSync("./test.txt",new Date().getDate().toLocaleString());
 // fs.appendFileSync("./test.txt", `hello\n`);
-(require("fs")).appendFileSync("./test.txt", `${Date.now()} hello\n`);
+fs.appendFileSync("./test.txt", `${Date.now()} hello\n`);
 
+// copy file :
+fs.cpSync("./test.txt","./copy.txt");
