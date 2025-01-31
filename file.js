@@ -10,4 +10,20 @@ const fs = require("fs");
 // fs.writeFileSync('./test.txt','Hey There');
 
 // Async:
-fs.writeFile('./test.txt','Hey There Async',(err)=>{});
+// fs.writeFile('./test.txt','Hey There Async',(err)=>{});
+
+
+// read file :
+//Sync: when we use this then the sync give result in the form of variable 
+// const result = fs.readFileSync('./contact.txt',"utf-8");
+// console.log(result);
+
+//Async: but here we use the callback function bcz Async doesn't give the value to the variable 
+fs.readFile('./contact.txt',"utf-8",(err,result)=>{
+    if(err){
+        console.log("Error");
+        
+    }else{
+        console.log(result);
+    }
+});
