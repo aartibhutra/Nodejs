@@ -9,9 +9,21 @@ const myServer = http.createServer((req,res)=>{
     // console.log("New Req Rec");
     // console.log(req);// all the data that the client sent to the server is stored in the req object
     // res.end("Hello From Server Again")
-    const log = `${Date.now()}:New Req Received\n`;
+    const log = `${Date.now()}: ${req.url} New Req Received\n`;
     fs.appendFile("log.txt",log,(err,data)=>{
-        res.end(" hello form server Again");
+        // res.end(" hello form server Again");
+        switch(req.url){
+            // / is denote to the home page 
+            case "/":
+                res.end("Home Page");
+                break;
+            case "/about":
+                res.end("I am Aarti Bhutra");
+                break;
+            default:
+                res.end("404 Not Found");
+
+        }
     });
     
 });
