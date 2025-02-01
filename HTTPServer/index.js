@@ -13,5 +13,5 @@ const myServer = http.createServer((req,res)=>{
 // on the port number we have to listen our server
 // if we have same server then we can't run server on the same port 
 // one server have one port 
-myServer.listen(8000,() => console.log("Server started")
+myServer.listen(8001,() => console.log("Server started")
 );
