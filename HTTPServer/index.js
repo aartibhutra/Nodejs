@@ -1,13 +1,20 @@
 const http = require('http');
+const fs = require('fs');
 
 // this create a web server for us 
 // you need handler function to handle the incoming request 
+//(req,res)=>{} this is responsible for process the incoming request
 const myServer = http.createServer((req,res)=>{
     // res is the response object that we can use to send data back to the client
-    console.log("New Req Rec.");
-    res.end("Hello From Server")
+    // console.log("New Req Rec");
+    // console.log(req);// all the data that the client sent to the server is stored in the req object
+    // res.end("Hello From Server Again")
+    const log = `${Date.now()}:New Req Received\n`;
+    fs.appendFile("log.txt",log,(err,data)=>{
+        res.end(" hello form server Again");
+    });
     
-});//(req,res)=>{} this is responsible for process the incoming request
+});
 
 // we need port number to run the server 
 // on the port number we have to listen our server
