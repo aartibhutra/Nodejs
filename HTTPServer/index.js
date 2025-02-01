@@ -12,6 +12,7 @@ const myServer = http.createServer((req,res)=>{
     const log = `${Date.now()}: ${req.url} New Req Received\n`;
     fs.appendFile("log.txt",log,(err,data)=>{
         // res.end(" hello form server Again");
+        // Multi-route
         switch(req.url){
             // / is denote to the home page 
             case "/":
