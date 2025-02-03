@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const url = require('url');
 
 // this create a web server for us 
 // you need handler function to handle the incoming request 
@@ -11,10 +12,15 @@ const myServer = http.createServer((req,res)=>{
     // console.log(req);// all the data that the client sent to the server is stored in the req object
     // res.end("Hello From Server Again")
     const log = `${Date.now()}: ${req.url} New Req Received\n`;
+    // const myurl = url.parse(req.url,true);
+    const myurl = url.parse(req.url);
+    console.log(myurl);
+    
     fs.appendFile("log.txt",log,(err,data)=>{
         // res.end(" hello form server Again");
         // Multi-route
-        switch(req.url){
+        // switch(req.url)
+        switch(myurl.pathname){
             // / is denote to the home page 
             case "/":
                 res.end("Home Page");
