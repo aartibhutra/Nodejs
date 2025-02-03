@@ -12,8 +12,8 @@ const myServer = http.createServer((req,res)=>{
     // console.log(req);// all the data that the client sent to the server is stored in the req object
     // res.end("Hello From Server Again")
     const log = `${Date.now()}: ${req.url} New Req Received\n`;
-    // const myurl = url.parse(req.url,true);
-    const myurl = url.parse(req.url);
+    const myurl = url.parse(req.url,true); // here true pass the query string to the object
+    // const myurl = url.parse(req.url);
     console.log(myurl);
     
     fs.appendFile("log.txt",log,(err,data)=>{
@@ -26,8 +26,11 @@ const myServer = http.createServer((req,res)=>{
                 res.end("Home Page");
                 break;
             case "/about":
-                res.end("I am Aarti Bhutra");
+                const username = myurl.query.myname;
+                res.end(`Hello ${username} This is About Page`);
+                // res.end("I am Aarti Bhutra");
                 break;
+            
             default:
                 res.end("404 Not Found");
 
