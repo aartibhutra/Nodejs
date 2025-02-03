@@ -5,6 +5,7 @@ const fs = require('fs');
 // you need handler function to handle the incoming request 
 //(req,res)=>{} this is responsible for process the incoming request
 const myServer = http.createServer((req,res)=>{
+    if(req.url==="/favicon.ico") return res.end();
     // res is the response object that we can use to send data back to the client
     // console.log("New Req Rec");
     // console.log(req);// all the data that the client sent to the server is stored in the req object
@@ -35,3 +36,5 @@ const myServer = http.createServer((req,res)=>{
 // one server have one port 
 myServer.listen(8001,() => console.log("Server started")
 );
+
+// /about?myname=Aarti for this we use the external module or package (npmjs.com , here are all the packages that we install in the node server)
