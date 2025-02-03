@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aartibhutra/Nodejs/issues"
   },
-  "homepage": "https://github.com/aartibhutra/Nodejs#readme"
+  "homepage": "https://github.com/aartibhutra/Nodejs#readme",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }
