@@ -1,1 +1,12 @@
-// Http 
+import { get } from "http";
+
+// Http Methods:
+                // Get : when you want to get some data from the server
+                // Post : when you want to send and mutate some data to the server eg: html forms 
+                // Put : when you want to update some data on the server
+                // Delete : when you want to delete some data from the server
+                //Patch : when you want to update some data on the server but you don't want to send the whole data
+                // Head
+                // Options
+                // Connect
+
