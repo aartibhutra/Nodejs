@@ -30,7 +30,10 @@ const myServer = http.createServer((req,res)=>{
                 res.end(`Hello ${username} This is About Page`);
                 // res.end("I am Aarti Bhutra");
                 break;
-            
+            case "/search":
+                const search = myurl.query.search_query;
+                res.end("here are your results for "+ search);
+                break;
             default:
                 res.end("404 Not Found");
 
