@@ -1,18 +1,14 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
-
-// this create a web server for us 
-// you need handler function to handle the incoming request 
 //(req,res)=>{} this is responsible for process the incoming request
 const myServer = http.createServer((req,res)=>{
     if(req.url==="/favicon.ico") return res.end();
-    // res is the response object that we can use to send data back to the client
     // console.log("New Req Rec");
-    // console.log(req);// all the data that the client sent to the server is stored in the req object
+    // console.log(req);
     // res.end("Hello From Server Again")
     const log = `${Date.now()}: ${req.url} New Req Received\n`;
-    const myurl = url.parse(req.url,true); // here true pass the query string to the object
+    const myurl = url.parse(req.url,true); 
     // const myurl = url.parse(req.url);
     console.log(myurl);
     
