@@ -7,10 +7,10 @@ const myServer = http.createServer((req,res)=>{
     // console.log("New Req Rec");
     // console.log(req);
     // res.end("Hello From Server Again")
-    const log = `${Date.now()}: ${req.url} New Req Received\n`;
+    const log = `${Date.now()}: ${req.method} ${req.url} New Req Received\n`;
     const myurl = url.parse(req.url,true); 
     // const myurl = url.parse(req.url);
-    console.log(myurl);
+    // console.log(myurl);
     
     fs.appendFile("log.txt",log,(err,data)=>{
         // res.end(" hello form server Again");
