@@ -1,2 +1,7 @@
 1738827564634: / New Req Received
 1738827744593: GET / New Req Received
+1738827801693: GET /about New Req Received
+1738828079416: GET / New Req Received
+1738828085404: GET / New Req Received
+1738828096233: GET /Signup New Req Received
+1738828126456: GET /Signup New Req Received

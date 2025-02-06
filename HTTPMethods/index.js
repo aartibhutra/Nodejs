@@ -19,7 +19,7 @@ const myServer = http.createServer((req,res)=>{
         switch(myurl.pathname){
             // / is denote to the home page 
             case "/":
-                res.end("Home Page");
+                if(req.method==='GET') res.end("Home Page");
                 break;
             case "/about":
                 const username = myurl.query.myname;
@@ -30,6 +30,14 @@ const myServer = http.createServer((req,res)=>{
                 const search = myurl.query.search_query;
                 res.end("here are your results for "+ search);
                 break;
+            case "/Signup":
+                if(req.method==='GET') res.end('This is a SignUp Form');
+                else if(req.method==='POST'){
+                    //db query
+                    res.end("Success");
+                }
+                break;
+
             default:
                 res.end("404 Not Found");
 
