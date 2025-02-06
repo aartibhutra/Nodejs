@@ -1,2 +1,19 @@
 // version 
-4.21.2
+    4.21.2
+
+1st part -> 4
+2nd part -> 21
+3rd part -> 2
+
+// 3rd part (Last part) - Minor fixes (optional)
+
+//2nd part - Recommended Bug Fix (Security fix or new features added )
+
+
+// 3rd part  Major release -Major/Breaking updates 
+
+express = ^4.21.2
+4th version 
+
+^(carrot symbol) means: we install 4.21.2 -> < 5.0.0 version 
+^ -> install all recommended and minor fixes automatically (compatible with version)
