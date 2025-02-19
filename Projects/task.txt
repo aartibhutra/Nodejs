@@ -1,7 +1,7 @@
 WE are designing a REST API using JSON 
 
 ROUTES :
-        GET /users - List all users 
+        GET /users - List all users - Done
 
         GET /users/1 - Get the users ID 1
         GET /users/2 - Get the users ID 2
