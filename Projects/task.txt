@@ -1,0 +1,15 @@
+WE are designing a REST API using JSON 
+
+ROUTES :
+        GET /users - List all users 
+
+        GET /users/1 - Get the users ID 1
+        GET /users/2 - Get the users ID 2
+
+        POST /users - Create new users 
+
+        PATCH /users/id - Edit the user with ID 
+        PATCH /users/1 - Edit the user with ID 1
+
+
+        DELETE /users/1 - delete the user with ID 1
