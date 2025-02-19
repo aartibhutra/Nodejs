@@ -1,10 +1,18 @@
 WE are designing a REST API using JSON 
 
 ROUTES :
-        GET /users - List all users - Done
+        GET /users - HTML Document render 
+        GET /api/users - List all users - Done
 
-        GET /users/1 - Get the users ID 1
-        GET /users/2 - Get the users ID 2
+
+        WE can't directly write these routes in the code because we are using a framework that handles this for us.
+        Dynamic Path Parameters: 
+        represented as : that shows the parameter work as dynamic 
+        GET /api/users/:id - done 
+        :id -> Variable | Dynamic 
+
+        GET /users/1 - Get the users ID 1 - done 
+        GET /users/2 - Get the users ID 2 - done 
 
         POST /users - Create new users 
 
