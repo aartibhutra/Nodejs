@@ -13,7 +13,10 @@ app.use((req,res,next) =>{
     // return res.json({msg : "helooo"} );
     // console.log("hello");
     // req.myUserName = "AartiBhutra";
-    next();
+    fs.appendFile('log.txt',`\n${Date.now()} : ${req.method} : ${req.path}`,(err,data) =>{
+        next();
+    });
+    // next();
 });
 
 app.use((req,res,next) =>{
