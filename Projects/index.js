@@ -55,9 +55,9 @@ app.post("/api/users" , (req,res) =>{
     console.log("Body",body);
     // push in the data 
     users.push({...body , id: users.length+1});// then we have to write the data in the original file with the help of the fs module
-    fs.writeFile('./Projects/MOCK_DATA.json',JSON.stringify(users),(err,data) => {
+    fs.writeFile('./MOCK_DATA.json',JSON.stringify(users),(err,data) => {
         console.log(err)
-        return res.json({ status : "pending"});
+        return res.json({ status : "success" ,id: users.length+1 });
     }); 
 });
 
