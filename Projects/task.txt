@@ -14,6 +14,8 @@ ROUTES :
         GET /users/1 - Get the users ID 1 - done 
         GET /users/2 - Get the users ID 2 - done 
 
+        // we can't use directly post,patch , delete  request bcz by default browser use the get 
+
         POST /users - Create new users 
 
         PATCH /users/id - Edit the user with ID 
