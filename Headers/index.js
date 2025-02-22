@@ -31,10 +31,11 @@ app.get("/users",(req,res) =>{
 
 //REST API:
 app.get('/api/users', (req, res) => {
+    // Always add X to custom header 
+    res.setHeader('X-myName' ,'Aarti bhutra');// custom header
+    console.log(req.headers);
     return res.json(users);
 });
-
-// "/api/users/:id" we merge get , patch and delete bcz they have same route 
 
 app.route("/api/users/:id").get((req,res) => {
     //get the id 
