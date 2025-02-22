@@ -53,15 +53,14 @@ app.route("/api/users/:id").get((req,res) => {
 // in the body of postman we send our data 
 app.post("/api/users" , (req,res) =>{
     //TODO: create new user
-
-    const body = req.body;// by default express do store the data to the body that we send through frontend  
+    const body = req.body;  
     // use plugin :
     console.log("Body",body);
     // push in the data 
-    users.push({...body , id: users.length+1});// then we have to write the data in the original file with the help of the fs module
+    users.push({...body , id: users.length+1});
     fs.writeFile('./MOCK_DATA.json',JSON.stringify(users),(err,data) => {
         console.log(err)
-        return res.json({ status : "success" ,id: users.length+1 });
+        return res.status(201).json({ status : "success" ,id: users.length+1 });
     }); 
 });
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
