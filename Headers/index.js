@@ -54,6 +54,9 @@ app.route("/api/users/:id").get((req,res) => {
 app.post("/api/users" , (req,res) =>{
     //TODO: create new user
     const body = req.body;  
+    if(!body||!body.first_name||!body.last_name||!body.email||body.gender||!body.job_title){
+        return res.status(400).json({msg:'All fields are required...'});
+    };
     // use plugin :
     console.log("Body",body);
     // push in the data 
