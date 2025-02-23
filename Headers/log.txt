@@ -7,3 +7,4 @@
 1740201110527 : GET : /api/users
 1740202431397 : POST : /api/users
 1740213795014 : POST : /api/users
+1740213983258 : GET : /api/users/200
